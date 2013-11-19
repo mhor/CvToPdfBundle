@@ -1,4 +1,4 @@
-# CvToPdfBundle [![Build Status](https://travis-ci.org/mhor/CvToPdfBundle.png?branch=master)](https://travis-ci.org/mhor/CvToPdfBundle) | [![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/mhor/CvToPdfBundle/badges/quality-score.png?s=33710d8dac16e8fa279e787c255baa250d0134fc)](https://scrutinizer-ci.com/g/mhor/CvToPdfBundle/)
+# CvToPdfBundle [![Build Status](https://travis-ci.org/mhor/CvToPdfBundle.png?branch=master)](https://travis-ci.org/mhor/CvToPdfBundle) [![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/mhor/CvToPdfBundle/badges/quality-score.png?s=33710d8dac16e8fa279e787c255baa250d0134fc)](https://scrutinizer-ci.com/g/mhor/CvToPdfBundle/)
 
 ## Introduction
 
