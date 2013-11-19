@@ -1,4 +1,4 @@
-# CvToPdfBundle [![Build Status](https://travis-ci.org/mhor/CvToPdfBundle.png?branch=1.0.0)](https://travis-ci.org/mhor/CvToPdfBundle)
+# CvToPdfBundle [![Build Status](https://travis-ci.org/mhor/CvToPdfBundle.png?branch=master)](https://travis-ci.org/mhor/CvToPdfBundle)
 
 ## Introduction
 
