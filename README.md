@@ -9,7 +9,7 @@ Easy way to generate beautiful CV on PDF format
 With [composer](http://packagist.org), add:
 ```json
 {
-    require: {
+    "require" : {
         "mhor/cv-to-pdf-bundle": "dev-master"
     }
 }
