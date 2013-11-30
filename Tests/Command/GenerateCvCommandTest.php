@@ -6,9 +6,6 @@ use Symfony\Bundle\FrameworkBundle\Console\Application;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Mhor\CvToPdfBundle\Command\GenerateCvCommand;
 
-/**
- * PHPUnit class must ended by "Test" string
- */
 class GenerateCvCommandTest extends WebTestCase
 {
     
@@ -22,10 +19,6 @@ class GenerateCvCommandTest extends WebTestCase
         return $this->getMock('Symfony\Component\HttpKernel\Kernel', array(), array(), '', false, false);
     }
 
-    /**
-     * A test function must start by string "test"
-     *  
-     */
     public function testExecute()
     {
         $kernel = $this->getMockKernel();
