@@ -3,13 +3,24 @@ namespace Mhor\CvToPdfBundle\Tests\Command;
 
 use Symfony\Component\Console\Tester\CommandTester;
 use Symfony\Bundle\FrameworkBundle\Console\Application;
+use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Mhor\CvToPdfBundle\Command\GenerateCvCommand;
 
 /**
  * PHPUnit class must ended by "Test" string
  */
-class GenerateCvCommandTest extends \PHPUnit_Framework_TestCase
+class GenerateCvCommandTest extends WebTestCase
 {
+    
+    /**
+     * Gets Kernel mock instance
+     *
+     * @return Symfony\Component\HttpKernel\Kernel
+     */
+    private function getMockKernel()
+    {
+        return $this->getMock('Symfony\Component\HttpKernel\Kernel', array(), array(), '', false, false);
+    }
 
     /**
      * A test function must start by string "test"
@@ -17,8 +28,10 @@ class GenerateCvCommandTest extends \PHPUnit_Framework_TestCase
      */
     public function testExecute()
     {
+        $kernel = $this->getMockKernel();
+        $kernel->boot();
     
-        $application = new Application();
+        $application = new Application($kernel);
         $application->add(new GenerateCvCommand());
 
         $command = $application->find('mhor:generate:cv');
@@ -32,6 +45,7 @@ class GenerateCvCommandTest extends \PHPUnit_Framework_TestCase
                 'interactive' => false
             )
         );
-        $this->assertEquals("Not yet implemented", $commandTester->getDisplay());
+       
+        $this->assertEquals("Not yet implemented\n", $commandTester->getDisplay());
     }
 }
