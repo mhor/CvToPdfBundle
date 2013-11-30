@@ -7,13 +7,6 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
-
-/**
- * You must extends ContainerAwareCommand for automatically
- * register a Command on a Symfony app, if you extend Command
- * you must manually register her into  app/console file. 
- *
- */
 class GenerateCvCommand extends ContainerAwareCommand
 {
     protected function configure()
@@ -22,7 +15,7 @@ class GenerateCvCommand extends ContainerAwareCommand
             ->setName('mhor:generate:cv')
             ->setDescription('Generate a cv in pdf format')
             ->addArgument('file', InputArgument::REQUIRED, '[Requiered] File name?')
-            ->addArgument('type', InputArgument::REQUIRED, '[Requiered]File type (JSON/XML)') // optional argument
+            ->addArgument('type', InputArgument::REQUIRED, '[Requiered]File type (JSON/XML)')
         ;
     }
     
