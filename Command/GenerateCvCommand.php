@@ -21,6 +21,10 @@ class GenerateCvCommand extends ContainerAwareCommand
     
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-         $output->writeln('<info>Not yet implemented</>');
+        $this->container = $this->getApplication()->getKernel()->getContainer();
+        $cvGenerator = $this->container->get('cv_generator');
+        $output->writeln($cvGenerator->generateCv());
+        
+        $output->writeln('<info>Not yet implemented</>');
     }
 }

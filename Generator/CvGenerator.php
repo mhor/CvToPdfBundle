@@ -5,6 +5,6 @@ class CvGenerator
 {
     public function generateCv()
     {
-        echo "Service not yet implemented\n";
+        return "Service not yet implemented\n";
     }
 }
