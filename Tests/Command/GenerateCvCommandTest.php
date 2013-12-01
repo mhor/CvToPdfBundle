@@ -21,24 +21,30 @@ class GenerateCvCommandTest extends WebTestCase
 
     public function testExecute()
     {
-        $kernel = $this->getMockKernel();
-        $kernel->boot();
-    
-        $application = new Application($kernel);
-        $application->add(new GenerateCvCommand());
+        static::$kernel = static::createKernel();
+        static::$kernel->boot();
 
+        
+        $application = new Application(static::$kernel);
+        $application->add(new GenerateCvCommand());
+        
         $command = $application->find('mhor:generate:cv');
+        
+       
+        
         $commandTester = new CommandTester($command);
         $commandTester->execute(
             array(
-                'file' => '',
+                'file' => 'mhor.json',
                 'type' => 'json',
             ),
             array(
                 'interactive' => false
             )
         );
-       
-        $this->assertEquals("Not yet implemented\n", $commandTester->getDisplay());
+        
+        $this->assertEquals("Service not yet implemented\n\nNot yet implemented\n", 
+            $commandTester->getDisplay()
+        );
     }
 }
