@@ -1,4 +1,4 @@
-# CvToPdfBundle [![Build Status](https://travis-ci.org/mhor/MhorCvToPdfBundle.png?branch=master)](https://travis-ci.org/mhor/MhorCvToPdfBundle) [![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/mhor/MhorCvToPdfBundle/badges/quality-score.png?s=69790234da671d2b3e388ba41683bb614a5208aa)](https://scrutinizer-ci.com/g/mhor/MhorCvToPdfBundle/)
+# CvToPdfBundle [![SensioLabsInsight](https://insight.sensiolabs.com/projects/6829a191-b163-4d1d-941c-9b04bd2b9993/small.png)](https://insight.sensiolabs.com/projects/6829a191-b163-4d1d-941c-9b04bd2b9993) [![Build Status](https://travis-ci.org/mhor/MhorCvToPdfBundle.png?branch=master)](https://travis-ci.org/mhor/MhorCvToPdfBundle) [![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/mhor/MhorCvToPdfBundle/badges/quality-score.png?s=69790234da671d2b3e388ba41683bb614a5208aa)](https://scrutinizer-ci.com/g/mhor/MhorCvToPdfBundle/)
 
 ## Introduction
 
