@@ -18,7 +18,7 @@
         "symfony/framework-bundle": "~2.3",
         "symfony/console": "~2.3",
         "symfony/finder": "~2.3",
-        "knplabs/knp-snappy-bundle": "dev-master"
+        "knplabs/knp-snappy-bundle": "v1.1"
         
     },
     "target-dir": "Mhor/CvToPdfBundle",
