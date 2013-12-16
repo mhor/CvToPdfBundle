@@ -1,10 +1,12 @@
 <?php
+
 namespace Mhor\CvToPdfBundle\Command;
 
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
+use Symfony\Component\HttpFoundation\File\File;
 
 class GenerateCvCommand extends ContainerAwareCommand
 {
@@ -17,13 +19,30 @@ class GenerateCvCommand extends ContainerAwareCommand
             ->addArgument('type', InputArgument::REQUIRED, '[Requiered]File type (JSON/XML)')
         ;
     }
-    
+
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $this->container = $this->getApplication()->getKernel()->getContainer();
         $cvGenerator = $this->container->get('cv_generator');
-        $output->writeln($cvGenerator->generateCv());
-        
+
+        $currentDirectory = "";
+
+        $xmlCv = new File($currentDirectory . $input->getParameterOption('file'));
+
+        switch ($input->getArgument('type')) {
+            case 'xml':
+                $cv = $cvGenerator->transformXmlCvToObject($xmlCv);
+                break;
+            case 'json':
+                $cv = $cvGenerator->transformJsonCvToObject($xmlCv);
+                break;
+            default :
+                $output->writeln("This format is not supported");
+                exit(1);
+                break;
+        }
+
+        $output->writeln($cvGenerator->generateCv($cv));
         $output->writeln('<info>Not yet implemented</>');
     }
 }

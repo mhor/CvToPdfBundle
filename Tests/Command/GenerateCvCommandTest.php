@@ -35,7 +35,7 @@ class GenerateCvCommandTest extends WebTestCase
         $commandTester = new CommandTester($command);
         $commandTester->execute(
             array(
-                'file' => 'mhor.json',
+                'file' => 'Tests/cv/mhor.json',
                 'type' => 'json',
             ),
             array(
