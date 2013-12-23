@@ -12,7 +12,8 @@ class AppKernel extends Kernel
     {
         return array(
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
-            new Mhor\CvToPdfBundle\MhorCvToPdfBundle()
+            new Mhor\CvToPdfBundle\MhorCvToPdfBundle(),
+            new Endroid\Bundle\QrCodeBundle\EndroidQrCodeBundle(),
         );
     }
 
