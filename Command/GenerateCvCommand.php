@@ -38,7 +38,7 @@ class GenerateCvCommand extends ContainerAwareCommand
                 break;
             default :
                 $output->writeln("This format is not supported");
-                exit(1);
+                return 1;
                 break;
         }
 
