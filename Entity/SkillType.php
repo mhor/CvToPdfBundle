@@ -1,16 +1,19 @@
 <?php
 
-namespace Mhor\CvToPdfBundle\Model;
+namespace Mhor\CvToPdfBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Skill
- *
+ * SkillType
+ * @ORM\MappedSuperclass
  */
-class Skill
+class SkillType
 {
     /**
      * @var string
      *
+     * @ORM\Column(name="libel", type="string")
      */
     private $libel;
 
@@ -18,19 +21,19 @@ class Skill
      * Set libel
      *
      * @param string $libel
-     * @return Skill
+     * @return SkillType
      */
     public function setLibel($libel)
     {
         $this->libel = $libel;
-    
+
         return $this;
     }
 
     /**
      * Get libel
      *
-     * @return string 
+     * @return string
      */
     public function getLibel()
     {
