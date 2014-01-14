@@ -2,7 +2,7 @@
 
 namespace Mhor\CvToPdfBundle\Generator;
 
-use Mhor\CvToPdfBundle\Model\Cv;
+use Mhor\CvToPdfBundle\Entity\Cv;
 
 class CvGenerator
 {
@@ -13,9 +13,9 @@ class CvGenerator
 
     /**
      * Transform XML to Cv Object
-     * 
+     *
      * @param File $xmlCv
-     * @return \Mhor\CvToPdfBundle\Model\Cv
+     * @return \Mhor\CvToPdfBundle\Entity\Cv
      */
     public function transformXmlCvToObject($xmlCv)
     {
@@ -25,7 +25,7 @@ class CvGenerator
     /**
      * Transform JSON to Cv Object
      * @param File $xmlJson
-     * @return \Mhor\CvToPdfBundle\Model\Cv
+     * @return \Mhor\CvToPdfBundle\Entity\Cv
      */
     public function transformJsonCvToObject($xmlJson)
     {

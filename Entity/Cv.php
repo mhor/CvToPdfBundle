@@ -1,6 +1,6 @@
 <?php
 
-namespace Mhor\CvToPdfBundle\Model;
+namespace Mhor\CvToPdfBundle\Entity;
 
 /**
  * Cv
@@ -9,7 +9,7 @@ namespace Mhor\CvToPdfBundle\Model;
 class Cv
 {
     /**
-     * @var \Mhor\CvToPdfBundle\Model\Person
+     * @var \Mhor\CvToPdfBundle\Entity\Person
      */
     private $person;
 
@@ -17,7 +17,7 @@ class Cv
      * @var array
      */
     private $skills;
-    
+
     /**
      * @var array
      */
@@ -26,7 +26,7 @@ class Cv
     /**
      * A markdown formatted text whose explain
      * what is your passions
-     * 
+     *
      * @var string
      */
     private $passions;
@@ -34,7 +34,7 @@ class Cv
     /**
      * Get person
      *
-     * @return \Mhor\CvToPdfBundle\Model\Person 
+     * @return \Mhor\CvToPdfBundle\Entity\Person
      */
     public function getPerson()
     {
@@ -44,10 +44,10 @@ class Cv
     /**
      * Set Person
      *
-     * @param \Mhor\CvToPdfBundle\Model\Person $person
+     * @param \Mhor\CvToPdfBundle\Entity\Person $person
      * @return Cv
      */
-    public function setPerson(\Mhor\CvToPdfBundle\Model\Person $person)
+    public function setPerson(\Mhor\CvToPdfBundle\Entity\Person $person)
     {
         $this->person = $person;
         return $this;
@@ -56,7 +56,7 @@ class Cv
     /**
      * Get skills
      *
-     * @return array 
+     * @return array
      */
     public function getSkills()
     {
@@ -78,7 +78,7 @@ class Cv
     /**
      * Get experiences
      *
-     * @return array 
+     * @return array
      */
     public function getExperiences()
     {
@@ -100,7 +100,7 @@ class Cv
     /**
      * Get passsions
      *
-     * @return string 
+     * @return string
      */
     public function getPassions()
     {

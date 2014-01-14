@@ -1,45 +1,49 @@
 <?php
 
-namespace Mhor\CvToPdfBundle\Model;
+namespace Mhor\CvToPdfBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Experience
- *
+ * @ORM\MappedSuperclass
  */
-class Experience
+abstract class Experience
 {
     /**
      * @var string
-     *
+     * @ORM\Column(name="what", type="string")
      */
     private $what;
 
     /**
      * @var string
      *
+     * @ORM\Column(name="place", type="string")
      */
     private $place;
 
     /**
      * @var \DateTime
      *
+     * @ORM\Column(name="start_date", type="date")
      */
     private $startDate;
 
     /**
      * @var \DateTime
-     * @ORM\Column(name="endDate", type="date")
+     * @ORM\Column(name="end_date", type="date")
      */
     private $endDate;
 
     /**
      * @var string
-     *
+     * @ORM\Column(name="content", type="string")
      */
     private $content;
 
 
- 
+
     /**
      * Set what
      *
@@ -49,14 +53,14 @@ class Experience
     public function setWhat($what)
     {
         $this->what = $what;
-    
+
         return $this;
     }
 
     /**
      * Get what
      *
-     * @return string 
+     * @return string
      */
     public function getWhat()
     {
@@ -72,14 +76,14 @@ class Experience
     public function setPlace($place)
     {
         $this->place = $place;
-    
+
         return $this;
     }
 
     /**
      * Get place
      *
-     * @return string 
+     * @return string
      */
     public function getPlace()
     {
@@ -95,14 +99,14 @@ class Experience
     public function setStartDate($startDate)
     {
         $this->startDate = $startDate;
-    
+
         return $this;
     }
 
     /**
      * Get startDate
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getStartDate()
     {
@@ -118,14 +122,14 @@ class Experience
     public function setEndDate($endDate)
     {
         $this->endDate = $endDate;
-    
+
         return $this;
     }
 
     /**
      * Get endDate
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getEndDate()
     {
@@ -141,14 +145,14 @@ class Experience
     public function setContent($content)
     {
         $this->content = $content;
-    
+
         return $this;
     }
 
     /**
      * Get content
      *
-     * @return string 
+     * @return string
      */
     public function getContent()
     {
