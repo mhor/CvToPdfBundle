@@ -2,25 +2,21 @@
 
 namespace Mhor\CvToPdfBundle\Entity;
 
-use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Lang
- * @ORM\MappedSuperclass
  */
 abstract class LangLevel
 {
     /**
      * @var string
      *
-     * @ORM\Column(name="lang_string", type="string")
      */
     private $libel;
 
     /**
      * @var int
      *
-     * @ORM\Column(name="lang_code", type="int")
      */
     private $level;
 
