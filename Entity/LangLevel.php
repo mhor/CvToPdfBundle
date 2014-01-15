@@ -2,7 +2,6 @@
 
 namespace Mhor\CvToPdfBundle\Entity;
 
-
 /**
  * Lang
  */
@@ -15,7 +14,7 @@ abstract class LangLevel
     private $libel;
 
     /**
-     * @var int
+     * @var integer
      *
      */
     private $level;
