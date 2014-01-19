@@ -1,6 +1,6 @@
 <?php
 
-namespace Mhor\CvToPdfBundle\Entity;
+namespace Mhor\CvToPdfBundle\Model;
 
 /**
  * Lang
@@ -11,13 +11,13 @@ abstract class LangLevel
      * @var string
      *
      */
-    private $libel;
+    protected $libel;
 
     /**
      * @var integer
      *
      */
-    private $level;
+    protected $level;
 
     /**
      * Set libel
