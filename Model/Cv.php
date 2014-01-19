@@ -1,6 +1,6 @@
 <?php
 
-namespace Mhor\CvToPdfBundle\Entity;
+namespace Mhor\CvToPdfBundle\Model;
 
 /**
  * Cv
@@ -11,17 +11,17 @@ class Cv
     /**
      * @var \Mhor\CvToPdfBundle\Entity\Person
      */
-    private $person;
+    protected $person;
 
     /**
      * @var array
      */
-    private $skills;
+    protected $skills;
 
     /**
      * @var array
      */
-    private $experiences;
+    protected $experiences;
 
     /**
      * A markdown formatted text whose explain
@@ -29,7 +29,7 @@ class Cv
      *
      * @var string
      */
-    private $passions;
+    protected $passions;
 
     /**
      * Get person

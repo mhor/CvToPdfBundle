@@ -1,6 +1,6 @@
 <?php
 
-namespace Mhor\CvToPdfBundle\Entity;
+namespace Mhor\CvToPdfBundle\Model;
 
 /**
  * Person
